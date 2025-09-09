@@ -219,7 +219,7 @@ section {
   .btn-give {
     font-size: 0.95em;      /* Smaller button text */
     padding: 8px 12px;      /* Smaller buttons */
-  }
+  } 
 
   /* Make story and call-to-action sections have less padding and smaller text */
   .story,
