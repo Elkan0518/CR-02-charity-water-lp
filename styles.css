@@ -26,7 +26,7 @@ Fonts:
 /* Set up the main font and background color for the whole page */
 body {
   background-color: #f4f8fb; /* Soft light blue for a fresh look */
-  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
+  font-family: 'Montserrat', Arial, sans-serif; /* Updated to Montserrat */
   margin: 0;
   padding: 0;
   color: #222;
@@ -67,6 +67,7 @@ section {
   letter-spacing: 1px;
   margin-bottom: 15px;
   text-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Soft shadow for readability */
+  font-family: 'Montserrat', Arial, sans-serif; /* Updated to Montserrat */
 }
 
 /* Style the subheadline */
@@ -74,6 +75,7 @@ section {
   font-size: 1.2em;
   margin-top: 0;
   text-shadow: 0 1px 4px rgba(0,0,0,0.12);
+  font-family: 'Montserrat', Arial, sans-serif; /* Updated to Montserrat */
 }
 
 /* Story Section Styles */
@@ -82,6 +84,7 @@ section {
   color: #222;
   text-align: center;
   padding: 30px 20px;
+  font-family: 'Montserrat', Arial, sans-serif; /* Updated to Montserrat */
 }
 
 /* Add accent color to section headings */
@@ -89,6 +92,7 @@ h2 {
   color: #2E9DF7; /* Primary blue */
   margin-top: 0;
   font-weight: bold;
+  font-family: 'Montserrat', Arial, sans-serif; /* Updated to Montserrat */
 }
 
 /* Call-to-Action Section Styles */
@@ -97,6 +101,7 @@ h2 {
   color: #222;
   text-align: center;
   padding: 30px 20px;
+  font-family: 'Montserrat', Arial, sans-serif; /* Updated to Montserrat */
 }
 
 /* Style the impact story image */
@@ -123,12 +128,59 @@ h2 {
   transition: background 0.3s, transform 0.2s;
   border: none;
   cursor: pointer;
+  font-family: 'Montserrat', Arial, sans-serif; /* Updated to Montserrat */
 }
 
 /* Change button color when hovered */
 .donate-button:hover {
   background-color: #159A48; /* Dark Green */
   transform: translateY(-2px) scale(1.04); /* Slight lift */
+}
+
+/* Style the navigation links as buttons for beginners */
+.nav-links a {
+  text-decoration: none;           /* Remove underline */
+  color: #333;                     /* Dark text */
+  background-color: #FFC907;       /* Charity: Water yellow */
+  padding: 10px 22px;              /* Space inside button */
+  border-radius: 6px;              /* Rounded corners */
+  font-weight: bold;               /* Bold text */
+  font-family: 'Montserrat', Arial, sans-serif; /* Use Montserrat font */
+  transition: background 0.3s, transform 0.2s;  /* Smooth hover animation */
+  display: inline-block;           /* Make it look like a button */
+  margin: 0 4px;                   /* Space between buttons */
+  box-shadow: 0 2px 6px rgba(46, 157, 247, 0.08); /* Soft shadow */
+}
+
+/* Add a hover animation for all top buttons */
+.nav-links a:hover {
+  background-color: #2E9DF7;       /* Change to blue on hover */
+  color: #fff;                     /* White text on hover */
+  transform: translateY(-2px) scale(1.05); /* Slight lift and grow */
+  box-shadow: 0 4px 12px rgba(46, 157, 247, 0.18); /* Bigger shadow */
+}
+
+/* Style the GIVE button to match and animate on hover */
+.btn-give {
+  background-color: #4FCB53;       /* Green */
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+  font-family: 'Montserrat', Arial, sans-serif;
+  transition: background 0.3s, transform 0.2s; /* Smooth hover animation */
+  margin-left: 8px;
+  box-shadow: 0 2px 6px rgba(79, 203, 83, 0.10);
+}
+
+/* Hover animation for GIVE button */
+.btn-give:hover {
+  background-color: #159A48;       /* Dark Green */
+  transform: translateY(-2px) scale(1.05); /* Slight lift and grow */
+  box-shadow: 0 4px 12px rgba(79, 203, 83, 0.18); /* Bigger shadow */
 }
 
 /* Add some spacing between sections */
@@ -146,25 +198,41 @@ section {
 @media (max-width: 600px) {
   /* Make hero section padding smaller on small screens */
   .hero {
-    padding: 32px 8px;
-    font-size: 1em;
+    padding: 24px 6px;      /* Less padding for small screens */
+    font-size: 0.95em;      /* Slightly smaller text */
   }
 
   /* Make headline font size smaller so it fits on small screens */
   .hero h1 {
-    font-size: 1.4em;
+    font-size: 1.1em;       /* Smaller headline */
+    word-break: break-word; /* Prevents text from overflowing */
   }
 
   /* Make subheadline font size smaller */
   .hero p {
-    font-size: 1em;
+    font-size: 0.95em;      /* Smaller subheadline */
+    word-break: break-word; /* Prevents text from overflowing */
   }
 
-  /* Make story and call-to-action sections have less padding */
+  /* Make navigation links and button text smaller */
+  .nav-links a,
+  .btn-give {
+    font-size: 0.95em;      /* Smaller button text */
+    padding: 8px 12px;      /* Smaller buttons */
+  }
+
+  /* Make story and call-to-action sections have less padding and smaller text */
   .story,
   .call-to-action,
   .donation-section {
-    padding: 14px 8px;
+    padding: 10px 6px;
+    font-size: 0.95em;      /* Smaller section text */
+  }
+
+  /* Make section headings smaller */
+  h2 {
+    font-size: 1.1em;
+    word-break: break-word;
   }
 
   /* Make impact story image smaller and stack above the text */
@@ -175,7 +243,7 @@ section {
 
   .impact-image {
     width: 90%;    /* Make image take up most of the width */
-    max-width: 220px;
+    max-width: 180px;
   }
 }
 
